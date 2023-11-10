@@ -27,38 +27,25 @@ header{
 
 // Swiper
 .swiper {
-   
-    width: 1200px;
+    width: 820px;
+    padding: 0px 20px;
     text-align: center;
-    margin: auto;
+    // margin: auto;
     height: 200px;
     margin-top: 30px;
- 
-   
+
   }
-  
-//   .swiper-slide {
-//     width: 150px;
-//     text-align: center;
-//     font-size: 18px;
-  
-//     /* Center slide text vertically */
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
   
   .swiper-slide img {
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
   }
   
   .swiper-card{
     margin: 0px 20px !important;
     text-align: center !important;
-    // width: 120px !important;
     height: 135px !important;
     display: flex !important;
     flex-direction: column !important;

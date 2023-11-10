@@ -1,11 +1,13 @@
 import "./Hero.scss"
-import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+// import 'swiper/css/pagination';
+// import 'swiper/css/navigation';
+
+
 
 // import required modules
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { useEffect, useReducer } from "react";
 import { apiInstance } from "../../api";
 
@@ -44,20 +46,21 @@ const Hero = () => {
 
                 </div>
                 <Swiper
-                    slidesPerView={3}
-                    spaceBetween={20}
-                    freeMode={true}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    modules={[FreeMode, Pagination]}
-                    className="mySwiper"
-                >
-                    {
+                slidesPerView={3}
+        spaceBetween={40}
+        centeredSlides={false}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {
                         state.map((cry,index) =>
                             <SwiperSlide key={index} className="swiper-card">
                                 <img src={cry.image.large} alt="" />
@@ -69,8 +72,7 @@ const Hero = () => {
                             </SwiperSlide>
                             )
                     }
-                    
-                </Swiper>
+      </Swiper>
             </header>
         </>
     )
