@@ -66,7 +66,10 @@ header{
     gap: 5px 0 !important;
     small{
         color: #fff;
-        font-size: 10px;
+        font-size: 15px;
+    }
+    span{
+        color: #fff;
     }
     p{
         margin-top: 3px;
@@ -77,4 +80,14 @@ header{
     &:hover{
         cursor: pointer;
     }
+  }
+
+
+
+  .rise-price{
+    color: green !important;
+  }
+
+  .fall-price{
+    color: red !important;
   }

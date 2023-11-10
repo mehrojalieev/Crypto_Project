@@ -63,7 +63,7 @@ const Hero = () => {
                                 <img src={cry.image.large} alt="" />
                                 <div className="valyut">
                                     <small>{cry.name}</small> 
-                                    {/* <span>{cry.market_data.market_cap_change_percentage_24h_in_currency.aed}$</span> */}
+                                    <span className={cry.market_data.price_change_24h > 0 ? "rise-price": cry.market_data.price_change_24h.toFixed(5) === 0.00000 ? "rise-price" : "fall-price"}> {cry.market_data.price_change_24h.toFixed(2)}%</span>
                                     <p>₹ {cry.market_data.current_price.aed}</p>
                                 </div>
                             </SwiperSlide>
