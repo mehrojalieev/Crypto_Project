@@ -1,0 +1,37 @@
+.seo__title{
+    visibility: hidden;
+    width: 1px !important;
+    height: 1px !important;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    height: 50px;
+    margin: auto;
+    padding: 0px 20px;
+}
+
+.nav__menu{
+    display: flex;
+    align-items: center;
+    gap: 0px 30px;
+        select{
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+        }
+}
+.watch-btn{
+    width: 133px;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    letter-spacing: 0.5px;
+}
