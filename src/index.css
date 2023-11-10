@@ -8,7 +8,9 @@
 :root{
   --main-bg-color: #14161a;
   --primary-color: #87ceeb;
-  --second-text-color: #a9a9a9; 
+  --second-text-color: #a9a9a9;
+  --success-color: #0a7757;
+  --danger-color: #c40607; 
   --Roboto-font: 'Roboto', sans-serif;
   --Montserrat-font: 'Montserrat', sans-serif;
 }

@@ -30,7 +30,6 @@ header{
     width: 820px;
     padding: 0px 20px;
     text-align: center;
-    // margin: auto;
     height: 200px;
     margin-top: 30px;
 
@@ -72,9 +71,9 @@ header{
 
 
   .rise-price{
-    color: green !important;
+    color: var(--success-color) !important;
   }
 
   .fall-price{
-    color: red !important;
+    color: var(--danger-color) !important;
   }
