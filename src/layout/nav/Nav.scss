@@ -33,4 +33,22 @@ nav{
     font-weight: 500;
     border: none;
     letter-spacing: 0.5px;
+    transition: 0.2s;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+    &:active{
+        transform: scale(0.95);
+    }
+}
+
+
+aside{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 160px;
+    height: 100%;
+    background-color: gray;
 }

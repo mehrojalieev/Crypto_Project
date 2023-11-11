@@ -1,10 +1,13 @@
 import './scss/App.scss';
-import Home from './routes/home/Home';
+import AllRoutes from './routes/AllRoutes';
+import Nav from './layout/nav/Nav';
 
 function App() {
   return (
     <div className="App">
-        <Home/>
+      {/* <Nav/> */}
+        <AllRoutes/>
+
     </div>
   );
 }

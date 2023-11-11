@@ -1,0 +1,32 @@
+.crypto__view-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px 0;
+}
+.rank-title{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}
+.rank-description{
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+}
+.rank-info{
+    display: flex;
+    align-items: center;
+    gap: 0px 13px;
+    strong{
+        color: #fff;
+        font-weight: 700;
+        font-size: 24px;
+    }
+    span{
+        color: #fff;
+        font-size: 24px;
+        font-family: var(--Montserrat-font);
+    }
+}
