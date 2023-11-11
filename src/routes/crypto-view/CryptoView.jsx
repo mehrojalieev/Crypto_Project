@@ -7,7 +7,6 @@ const CryptoView = () => {
 
   const [data,setData] = useState()
   const { id } = useParams()
-  const [singleData, setSingleData] = useState({})
 
 
 
