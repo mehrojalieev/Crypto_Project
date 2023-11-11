@@ -8,6 +8,7 @@
     height: 40px;
     justify-content: center;
     width: 40px;
+    background-color: red;
   }
   
   .disabled-page {
@@ -35,7 +36,7 @@
   
   .pagination {
     align-items: center;
-    background-color: #0fbcf9;
+    margin: auto;
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -46,6 +47,8 @@
     width: 1000px;
     a{
       font-size: 20px;
+      padding: 6px;
+      color: var(--primary-color);
     }
   }
   

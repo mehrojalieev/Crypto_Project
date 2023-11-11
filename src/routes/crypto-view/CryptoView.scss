@@ -1,24 +1,47 @@
+.product__view-container{
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    // padding: 0px 30px;
+}
 .crypto__view-content{
+    width: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 10px 0;
+    border-right: 1px solid #fff;
+    margin-top: 40px;
+}
+.prices-card{
+    width: 100%;
+    padding: 0px 40px;
+}
+.crypto-name{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
 }
 .rank-title{
     color: #fff;
     font-size: 24px;
     font-weight: 700;
 }
+
 .rank-description{
+    width: 470px    ;
     color: #fff;
     font-size: 16px;
     letter-spacing: 0.5px;
     line-height: 24px;
+    margin: 24px  0 20px 0;
 }
 .rank-info{
     display: flex;
     align-items: center;
     gap: 0px 13px;
+    margin-top: 20px;
     strong{
         color: #fff;
         font-weight: 700;

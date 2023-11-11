@@ -7,6 +7,7 @@ import { Container } from "../../utils/Utils";
 import { AiOutlineEye } from 'react-icons/ai'
 
 import ReactPaginate from 'react-paginate';
+import { numberToCurrency } from "../../helpers";
 
 const reducer = (state, action) => {
   console.log(action);
@@ -86,7 +87,7 @@ const Main = () => {
                     <i><AiOutlineEye /></i>
                     <span className={crypto.price_change_percentage_24h_in_currency > 0 ? "rise-price" : crypto.price_change_percentage_24h_in_currency.toFixed(5) === 0.00000 ? "rise-price" : "fall-price"}> {crypto.price_change_percentage_24h_in_currency.toFixed(2)}%</span>
                   </td>
-                  <td className="crypto__market-cap"> ₹ {crypto.market_cap}M</td>
+                  <td className="crypto__market-cap">  {numberToCurrency(crypto.market_cap)}M</td>
                   <td></td>
                 </tr>
               )
