@@ -19,11 +19,31 @@ const reducer = (state, action) => {
 const Main = () => {
 
   const [state, dispatch] = useReducer(reducer, [])
-  const itemsPerPage = 20; // Har bir sahifada ko'rsatiladigan elementlar soni
+  const itemsPerPage = 20; 
 
+
+
+
+
+
+  const pageCount = Math.ceil(100 / itemsPerPage); // Umumiy sahifalar soni
+  console.log(pageCount)
+
+  const [currentPage, setCurrentPage] = useState(1);
+  console.log(currentPage + 1)
+  const indexOfLastItem = (currentPage + 1) * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = state.slice(indexOfFirstItem, indexOfLastItem);
+  
+  
+  const handlePageClick = ({ selected }) => {
+      setCurrentPage(selected);
+  };
+  
+  
   useEffect(() => {
     try {
-      apiInstance("coins/markets?vs_currency=USD&order=gecko_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h")
+      apiInstance(`coins/markets?vs_currency=USD&order=gecko_desc&per_page=10&page=${currentPage + 1}&sparkline=false&price_change_percentage=24h`)
         .then(response => {
           dispatch(response.data)
           console.log(response.data);
@@ -34,26 +54,6 @@ const Main = () => {
     }
 
   }, [])
-
-
-
-
-  const pageCount = Math.ceil(100 / itemsPerPage); // Umumiy sahifalar soni
-  console.log(pageCount)
-
-  const [currentPage, setCurrentPage] = useState(0);
-  console.log(currentPage + 1)
-  const indexOfLastItem = (currentPage + 1) * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  // const currentItems = state.slice(indexOfFirstItem, indexOfLastItem);
-  
-  
-  const handlePageClick = ({ selected }) => {
-      setCurrentPage(selected);
-  };
-  
-  
-
 
 
   return (

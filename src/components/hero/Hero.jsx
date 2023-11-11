@@ -7,10 +7,10 @@ import 'swiper/css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { useEffect, useReducer } from "react";
 import { apiInstance } from "../../api";
+import { Link } from "react-router-dom";
 
 const reducer = (state, action) => {
     return action
-    console.log(state);
 }
 
 
@@ -60,8 +60,10 @@ const Hero = () => {
                     >
                         {
                             state.map((cry, index) =>
-                                <SwiperSlide key={index} className="swiper-card">
+                                 <SwiperSlide key={index} className="swiper-card">
+                                     <Link to={`/cryptoView/${cry.id}`}>
                                     <img src={cry.image.large} alt="" />
+                               </Link>
                                     <div className="valyut">
                                         <small>{cry.name}</small>
                                         <span className={cry.market_data.market_cap_change_percentage_24h_in_currency.usd > 0 ? "rise-price" : cry.market_data.market_cap_change_percentage_24h_in_currency.usd.toFixed(5) === 0.00000 ? "rise-price" : "fall-price"}> {cry.market_data.market_cap_change_percentage_24h_in_currency.usd.toFixed(2)}%</span>
