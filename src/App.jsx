@@ -1,4 +1,4 @@
-import './App.scss';
+import './scss/App.scss';
 import Home from './routes/home/Home';
 
 function App() {

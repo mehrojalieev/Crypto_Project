@@ -1,14 +1,13 @@
 .crypto-wrapper{
     width: 100%;
-    max-width: 1200px;
     text-align: center;
-    margin-top: 27px;
     margin: 50px auto  0px;
-    h2{
-        color: var(--second-text-color);
-        font-size: 34px;
-        letter-spacing: 0.5px;
-    }
+
+}
+.crypto__title{
+    color: var(--second-text-color);
+    font-size: 34px;
+    letter-spacing: 0.5px;
 }
 .search-form{
     margin-top: 17px;
@@ -35,8 +34,7 @@ table{
 
 table > thead > tr{
     background-color: var(--primary-color);
-    height: 55px;
-    
+    height: 55px;  
     th{
         font-weight: 700;
     }

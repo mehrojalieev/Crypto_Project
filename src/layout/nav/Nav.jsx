@@ -1,10 +1,12 @@
 import "./Nav.scss"
-
+import { Container } from "../../utils/Utils"
 import SiteLogo from "../../assets/images/site-logo.svg"
 
 const Nav = () => {
   return (
-    <nav>
+  <div className="nav">
+     <Container>
+     <nav>
         <div className="nav__logo">
             <img src={SiteLogo} alt="Logo of Site" width={170} height={25} />
             <h1 className="seo__title">CRYPTOFOLIO</h1>
@@ -18,6 +20,8 @@ const Nav = () => {
             <button className="watch-btn">WATCH LIST</button>
         </div>
     </nav>
+   </Container>
+  </div>
   )
 }
 

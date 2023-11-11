@@ -1,6 +1,7 @@
-import { useEffect, useReducer } from "react"
 import "./Main.scss"
+import { useEffect, useReducer } from "react"
 import { apiInstance } from "../../api"
+import { Container } from "../../utils/Utils";
 
 const reducer = (state, action) => {
   console.log(action);
@@ -27,7 +28,7 @@ const Main = () => {
   }, [])
 
   return (
-    <>
+    <Container>
       <div className="crypto-wrapper">
         <h2 className="crypto__title">Cryptocurrency Prices by Market Cap</h2>
         <form className="search-form">
@@ -61,7 +62,7 @@ const Main = () => {
           </tbody>
         </table>
       </div>
-    </>
+    </Container>
   )
 }
 

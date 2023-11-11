@@ -1,5 +1,5 @@
 import "./Hero.scss"
-
+import { Container } from "../../utils/Utils";
 // SWIPER
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -17,14 +17,14 @@ const reducer = (state, action) => {
 const Hero = () => {
 
 
-    const [state,dispatch] = useReducer(reducer, [])
+    const [state, dispatch] = useReducer(reducer, [])
     useEffect(() => {
         try {
-        apiInstance("/coins/")
-        .then(response =>   {
-            dispatch(response.data)
-            console.log(response.data)
-        })
+            apiInstance("/coins/")
+                .then(response => {
+                    dispatch(response.data)
+                    console.log(response.data)
+                })
         }
         catch (error) {
 
@@ -35,41 +35,43 @@ const Hero = () => {
 
         <>
             <header>
-                <div className="hero-wrapper">
-                    <div className="hero__title">
-                        <h2>CRYPTOFOLIO WATCH LIST</h2>
-                        <p>Get all the Info regarding your favorite Crypto Currency</p>
-                    </div>
+                <Container>
+                    <div className="hero-wrapper">
+                        <div className="hero__title">
+                            <h2>CRYPTOFOLIO WATCH LIST</h2>
+                            <p>Get all the Info regarding your favorite Crypto Currency</p>
+                        </div>
 
-                </div>
-                <Swiper
-                slidesPerView={3}
-        spaceBetween={40}
-        centeredSlides={false}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {
-                        state.map((cry,index) =>
-                            <SwiperSlide key={index} className="swiper-card">
-                                <img src={cry.image.large} alt="" />
-                                <div className="valyut">
-                                    <small>{cry.name}</small> 
-                                    <span className={cry.market_data.price_change_24h > 0 ? "rise-price": cry.market_data.price_change_24h.toFixed(5) === 0.00000 ? "rise-price" : "fall-price"}> {cry.market_data.price_change_24h.toFixed(2)}%</span>
-                                    <p>₹ {cry.market_data.current_price.aed}</p>
-                                </div>
-                            </SwiperSlide>
+                    </div>
+                    <Swiper
+                        slidesPerView={3}
+                        spaceBetween={40}
+                        centeredSlides={false}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className="mySwiper"
+                    >
+                        {
+                            state.map((cry, index) =>
+                                <SwiperSlide key={index} className="swiper-card">
+                                    <img src={cry.image.large} alt="" />
+                                    <div className="valyut">
+                                        <small>{cry.name}</small>
+                                        <span className={cry.market_data.price_change_24h > 0 ? "rise-price" : cry.market_data.price_change_24h.toFixed(5) === 0.00000 ? "rise-price" : "fall-price"}> {cry.market_data.price_change_24h.toFixed(2)}%</span>
+                                        <p>₹ {cry.market_data.current_price.aed.toFixed(2)}</p>
+                                    </div>
+                                </SwiperSlide>
                             )
-                    }
-      </Swiper>
+                        }
+                    </Swiper>
+                </Container>
             </header>
         </>
     )
