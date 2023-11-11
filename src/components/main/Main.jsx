@@ -22,11 +22,7 @@ const Main = () => {
   const itemsPerPage = 20; 
 
 
-
-
-
-
-  const pageCount = Math.ceil(100 / itemsPerPage); // Umumiy sahifalar soni
+  const pageCount = Math.ceil(100 / itemsPerPage);
   console.log(pageCount)
 
   const [currentPage, setCurrentPage] = useState(1);
