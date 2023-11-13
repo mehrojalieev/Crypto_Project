@@ -88,6 +88,7 @@ const Main = () => {
                 </tr>
               )
             }
+            {/* Foot pagination */}
           </tbody>
           <tfoot>
           </tfoot>
